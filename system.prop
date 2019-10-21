@@ -1,0 +1,10 @@
+# System properties for Realme 1, get these values through ADB or you can use 'adb shell getprop >> getprop.txt' command to get every prop value.
+
+ro.product.brand=YU
+ro.product.name=YU5014
+ro.product.device=YU5014
+ro.build.product=YU5014
+ro.treble.enabled=true
+
+
+
