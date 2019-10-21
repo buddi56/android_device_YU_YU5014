@@ -17,4 +17,4 @@
 
 /external_sd        auto	/dev/block/mmcblk1p1	   /dev/block/mmcblk1               flags=display="External SDcard";storage;wipeingui;removable
 
-/usbotg		    vfat        /dev/block/sdf1           /dev/block/sdf	                   flags=display="Usb-Otg";storage;removable;wipeingui
+/usbotg		    auto        /dev/block/sda1           /dev/block/sda	                   flags=display="Usb-Otg";storage;removable;wipeingui
