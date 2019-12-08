@@ -9,7 +9,7 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
@@ -90,14 +90,16 @@ TARGET_COPY_OUT_VENDOR := vendor
 # TWRP Related
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_THEME := portrait_hdpi
-TW_MAX_BRIGHTNESS := 255
+TW_DEVICE_VERSION := $(shell date -u +" %F")
+TW_MAX_BRIGHTNESS := 456
+TW_DEFAULT_BRIGHTNESS := 365
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_USE_TOOLBOX := true
 TW_NO_SCREEN_BLANK := true
 TW_NO_BATT_PERCENT := false
-TW_NO_USB_STORAGE := false
 TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
 
