@@ -3,17 +3,17 @@
 
 /boot		    emmc	/dev/block/platform/bootdevice/by-name/boot             flags=display="Boot";backup=1
 
-/system		    ext4	/dev/block/platform/bootdevice/by-name/system		flags=display="System";backup=1
+/system		    ext4	/dev/block/platform/bootdevice/by-name/system		flags=display="System";backup=1;wipeingui
 
-/system_image       emmc	/dev/block/platform/bootdevice/by-name/system		flags=backup=1;flashimg=1
+/system_image       emmc	/dev/block/platform/bootdevice/by-name/system		flags=flashimg=1
 
 /cache		    ext4	/dev/block/platform/bootdevice/by-name/cache
 
 /data		    ext4	/dev/block/platform/bootdevice/by-name/userdata         flags=encryptable=/dev/block/platform/bootdevice/by-name/metadata
 
-/vendor             ext4        /dev/block/platform/bootdevice/by-name/vendor		flags=display="Vendor";backup=1
+/vendor             ext4        /dev/block/platform/bootdevice/by-name/vendor		flags=display="Vendor";backup=1;wipeingui
 
-/vendor_image	    emmc	/dev/block/platform/bootdevice/by-name/vendor		flags=backup=1;flashimg=1
+/vendor_image	    emmc	/dev/block/platform/bootdevice/by-name/vendor		flags=flashimg=1
 
 /external_sd        auto	/dev/block/mmcblk1p1	   /dev/block/mmcblk1               flags=display="External SDcard";storage;wipeingui;removable
 
