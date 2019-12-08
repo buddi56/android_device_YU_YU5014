@@ -1,7 +1,7 @@
 TWRP Device Tree for YU5014
 ===========================================
 
-The Realme 1 (codenamed _"YU5014"_) is a low-end smartphone from YU.	
+The YU Ace (codenamed _"YU5014"_) is a low-end smartphone from YU.	
  
 ## Device specifications
 
