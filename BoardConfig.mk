@@ -43,10 +43,6 @@ BOARD_TAGS_OFFSET := 0x03f88000
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user androidboot.selinux=permissive
 
-ifeq ($(WITH_PERMISSIVE), true)
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-endif
-
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
 
 BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --ramdisk_offset 0x04f88000 --second_offset 0x00e88000 --tags_offset 0x03f88000
@@ -81,7 +77,7 @@ TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
 
 # system.prop
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system_prop.mk
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
