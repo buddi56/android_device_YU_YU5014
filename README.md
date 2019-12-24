@@ -48,4 +48,4 @@ Then to sync up:
 
 Build the TWRP recovery using below command.
 
-   cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_YU5014-eng; mka recoveryimage
+    cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_YU5014-eng; mka recoveryimage
