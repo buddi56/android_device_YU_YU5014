@@ -1,0 +1,57 @@
+If you started building TWRP/ROM then these instaructions are for you.
+
+After repo initialization and before repo sync you have to add a file for syncing device tree and kernel source (TWRP). In case of ROM you have to add vendor tree also.
+
+A. Instructions (after repo init):
+
+1. cd <source_dir>
+
+2. cd .repo/
+
+3. mkdir local_manifests;
+
+4. cd local_manifests;
+
+5. nano roomservice.xml
+
+Now a file has been created and you have include various trees for building. roomservice.xml will be like this.
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project name="buddi56/android_device_YU_YU5014" path="device/YU/YU5014" remote="github" revision="master" />
+  ###<project name="buddi56/android_kernel_YU_YU5014" path="kernel/YU/YU5014" remote="github" revision="master" />###
+
+</manifest>
+
+
+As kernel source is not available I added hash. If kernel source is available then change the file accordingly. If kernel source is not available then remove 2nd line. Note: Using prebuilt kernels in building is deprecated.
+
+Now perform 
+
+repo sync -j(nproc --all) -c
+
+All the sources along with your TWRP device tree and kernel source (if available) will; be downloaded.
+
+
+B. Instructions (After repo sync):
+
+After repo sync you have to tell buildbot to include your device for building TWRP. So for this you can either make a vendorsetup.sh file in your device tree or can edit the available file in TWRP source.
+
+To edit vendorsetup.sh file in the downloaded TWRP source. Head to the below location.
+
+1. cd <source_dir>/vendor/omni/
+
+2. nano vendorsetup.sh
+
+Now add below line at the end.
+
+	add_lunch_combo omni_YU5014-eng
+
+3. Save file and exit.
+
+You can also choose user or userdbug. But they are not required for TWRP.
+
+
+##Now start the build process using the command given in README.md
